@@ -107,8 +107,23 @@ class _TaskState extends State<Task> {
                           child: Icon(Icons.arrow_drop_up))
                     ],
                   )),
-              Text('Nivel $nivel',
-                  style: TextStyle(fontSize: 18, color: Colors.white))
+              Padding(
+                padding: const EdgeInsets.all(10),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Container(
+                      width: 200,
+                      child: LinearProgressIndicator(
+                        color: Colors.white,
+                        value: nivel / 10,
+                      ),
+                    ),
+                    Text('Nivel $nivel',
+                        style: TextStyle(fontSize: 18, color: Colors.white))
+                  ],
+                ),
+              )
             ],
           )
         ])));
