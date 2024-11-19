@@ -45,7 +45,10 @@ class _InitialScreenState extends State<InitialScreen> {
                   4),
               Task('Jogar',
                   'https://i.ibb.co/tB29PZB/kako-epifania-2022-2-c-pia.jpg', 2),
+            
+              SizedBox(height: 80,)
             ],
+            
           ),
         ),
         floatingActionButton: FloatingActionButton(
