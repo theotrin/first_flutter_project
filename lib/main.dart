@@ -39,16 +39,24 @@ class MyApp extends StatelessWidget {
           ),
           body: ListView(
             children: [
-              Task('Andar de Patins',
-                  'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large'),
-              Task('Andar de Patins',
-                  'https://cdn.creazilla.com/cliparts/63407/roller-skating-clipart-md.png'),
-              Task('Ler',
-                  'https://thebogotapost.com/wp-content/uploads/2017/06/636052464065850579-137719760_flyer-image-1.jpg'),
-              Task('Meditar',
-                  'https://manhattanmentalhealthcounseling.com/wp-content/uploads/2019/06/Top-5-Scientific-Findings-on-MeditationMindfulness-881x710.jpeg'),
+              Task(
+                  'Andar de Patins',
+                  'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',
+                  3),
+              Task(
+                  'Andar de Patins',
+                  'https://cdn.creazilla.com/cliparts/63407/roller-skating-clipart-md.png',
+                  1),
+              Task(
+                  'Ler',
+                  'https://thebogotapost.com/wp-content/uploads/2017/06/636052464065850579-137719760_flyer-image-1.jpg',
+                  3),
+              Task(
+                  'Meditar',
+                  'https://manhattanmentalhealthcounseling.com/wp-content/uploads/2019/06/Top-5-Scientific-Findings-on-MeditationMindfulness-881x710.jpeg',
+                  4),
               Task('Jogar',
-                  'https://i.ibb.co/tB29PZB/kako-epifania-2022-2-c-pia.jpg'),
+                  'https://i.ibb.co/tB29PZB/kako-epifania-2022-2-c-pia.jpg', 2),
             ],
           ),
           floatingActionButton: FloatingActionButton(onPressed: () {})),
@@ -59,7 +67,8 @@ class MyApp extends StatelessWidget {
 class Task extends StatefulWidget {
   final String nome;
   final String imageUrl;
-  const Task(this.nome, this.imageUrl, {super.key});
+  final int dificuldade;
+  const Task(this.nome, this.imageUrl, this.dificuldade, {super.key});
 
   @override
   State<Task> createState() => _TaskState();
@@ -107,27 +116,37 @@ class _TaskState extends State<Task> {
                               Icon(
                                 Icons.star,
                                 size: 15,
-                                color: Colors.blue,
+                                color: widget.dificuldade > 0
+                                    ? Colors.blue
+                                    : Colors.blue[999],
                               ),
                               Icon(
                                 Icons.star,
                                 size: 15,
-                                color: Colors.blue,
+                                color: widget.dificuldade > 1
+                                    ? Colors.blue
+                                    : Colors.blue[100],
                               ),
                               Icon(
                                 Icons.star,
                                 size: 15,
-                                color: Colors.blue,
+                                color: widget.dificuldade > 2
+                                    ? Colors.blue
+                                    : Colors.blue[100],
                               ),
                               Icon(
                                 Icons.star,
                                 size: 15,
-                                color: Colors.blue,
+                                color: widget.dificuldade > 3
+                                    ? Colors.blue
+                                    : Colors.blue[100],
                               ),
                               Icon(
                                 Icons.star,
                                 size: 15,
-                                color: Colors.blue,
+                                color: widget.dificuldade > 4
+                                    ? Colors.blue
+                                    : Colors.blue[100],
                               ),
                             ],
                           )
