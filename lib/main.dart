@@ -82,7 +82,13 @@ class _TaskState extends State<Task> {
         padding: const EdgeInsets.all(8.0),
         child: Container(
             child: Stack(children: [
-          Container(color: Colors.blue, height: 140),
+          Container(
+            height: 140,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(4),
+              color: Colors.blue,
+            ),
+          ),
           Column(
             children: [
               Container(
@@ -92,11 +98,16 @@ class _TaskState extends State<Task> {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Container(
-                        color: Colors.black26,
                         width: 72,
                         height: 100,
-                        child:
-                            Image.network(widget.imageUrl, fit: BoxFit.cover),
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(4),
+                          color: Colors.black26,
+                        ),
+                        child: ClipRRect(
+                            borderRadius: BorderRadius.circular(4),
+                            child: Image.network(widget.imageUrl,
+                                fit: BoxFit.cover)),
                       ),
                       Column(
                         mainAxisAlignment: MainAxisAlignment.center,
@@ -186,7 +197,9 @@ class _TaskState extends State<Task> {
                       width: 200,
                       child: LinearProgressIndicator(
                         color: Colors.white,
-                        value: (widget.dificuldade > 0) ? (nivel / widget.dificuldade) / 10 : 1,
+                        value: (widget.dificuldade > 0)
+                            ? (nivel / widget.dificuldade) / 10
+                            : 1,
                       ),
                     ),
                     Text('Nivel $nivel',
