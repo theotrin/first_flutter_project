@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/task.dart';
+import 'package:flutter_projects/components/task.dart';
 
 class InitialScreen extends StatefulWidget {
   const InitialScreen({super.key});
@@ -17,16 +17,16 @@ class _InitialScreenState extends State<InitialScreen> {
         appBar: AppBar(
           backgroundColor: Colors.blue,
           leading: Container(),
-          title: Text(
+          title: const Text(
             'Tarefas:',
             style: TextStyle(color: Colors.white),
           ),
         ),
         body: AnimatedOpacity(
           opacity: opacidade ? 1 : 0,
-          duration: Duration(seconds: 1),
+          duration: const Duration(seconds: 1),
           child: ListView(
-            children: [
+            children: const [
               Task(
                   'Aprender Flutter',
                   'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',
@@ -54,7 +54,7 @@ class _InitialScreenState extends State<InitialScreen> {
               opacidade = !opacidade;
             });
           },
-          child: Icon(Icons.remove_red_eye),
+          child: const Icon(Icons.remove_red_eye),
         ));
   }
 }

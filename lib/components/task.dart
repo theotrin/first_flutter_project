@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/difficulty.dart';
+import 'package:flutter_projects/components/difficulty.dart';
 
 class Task extends StatefulWidget {
   final String nome;
@@ -17,8 +17,7 @@ class _TaskState extends State<Task> {
   Widget build(BuildContext context) {
     return Padding(
         padding: const EdgeInsets.all(8.0),
-        child: Container(
-            child: Stack(children: [
+        child: Stack(children: [
           Container(
             height: 140,
             decoration: BoxDecoration(
@@ -50,11 +49,11 @@ class _TaskState extends State<Task> {
                         mainAxisAlignment: MainAxisAlignment.center,
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          Container(
+                          SizedBox(
                             width: 200,
                             child: Text(
                               widget.nome,
-                              style: TextStyle(
+                              style: const TextStyle(
                                   fontSize: 24,
                                   overflow: TextOverflow.ellipsis),
                             ),
@@ -62,7 +61,7 @@ class _TaskState extends State<Task> {
                           Difficulty(difficultyLevel: widget.dificuldade)
                         ],
                       ),
-                      Container(
+                      SizedBox(
                         height: 64,
                         width: 64,
                         child: ElevatedButton(
@@ -71,7 +70,7 @@ class _TaskState extends State<Task> {
                                 nivel++;
                               });
                             },
-                            child: Column(
+                            child: const Column(
                               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                               crossAxisAlignment: CrossAxisAlignment.center,
                               children: [
@@ -92,7 +91,7 @@ class _TaskState extends State<Task> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    Container(
+                    SizedBox(
                       width: 200,
                       child: LinearProgressIndicator(
                         color: Colors.white,
@@ -102,13 +101,13 @@ class _TaskState extends State<Task> {
                       ),
                     ),
                     Text('Nivel $nivel',
-                        style: TextStyle(fontSize: 18, color: Colors.white))
+                        style:
+                            const TextStyle(fontSize: 18, color: Colors.white))
                   ],
                 ),
               )
             ],
           )
-        ])));
+        ]));
   }
 }
-

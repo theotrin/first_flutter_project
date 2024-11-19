@@ -1,19 +1,12 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_projects/initialScreen.dart';
+import 'package:flutter_projects/screens/initialScreen.dart';
 
 void main() {
-  runApp(MyApp());
+  runApp(const MyApp());
 }
 
-class MyApp extends StatefulWidget {
-  MyApp({super.key});
-
-  @override
-  State<MyApp> createState() => _MyAppState();
-}
-
-class _MyAppState extends State<MyApp> {
- 
+class MyApp extends StatelessWidget {
+  const MyApp({super.key});
 
   // This widget is the root of your application.
   @override
@@ -32,11 +25,11 @@ class _MyAppState extends State<MyApp> {
             backgroundColor: Colors.blue, // Cor do ElevatedButton
           ),
         ),
-        floatingActionButtonTheme: FloatingActionButtonThemeData(
+        floatingActionButtonTheme: const FloatingActionButtonThemeData(
           backgroundColor: Colors.blue, // Cor do FloatingActionButton
         ),
       ),
-      home: InitialScreen(),
+      home: const InitialScreen(),
     );
   }
 }
