@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_projects/difficulty.dart';
 
 void main() {
   runApp(MyApp());
@@ -45,18 +46,18 @@ class _MyAppState extends State<MyApp> {
             ),
           ),
           body: AnimatedOpacity(
-            opacity:  opacidade ? 1 : 0,
+            opacity: opacidade ? 1 : 0,
             duration: Duration(seconds: 1),
             child: ListView(
               children: [
                 Task(
-                    'Andar de Patins',
+                    'Aprender Flutter',
                     'https://pbs.twimg.com/media/Eu7m692XIAEvxxP?format=png&name=large',
                     3),
                 Task(
                     'Andar de Patins',
                     'https://cdn.creazilla.com/cliparts/63407/roller-skating-clipart-md.png',
-                    1),
+                    3),
                 Task(
                     'Ler',
                     'https://thebogotapost.com/wp-content/uploads/2017/06/636052464065850579-137719760_flyer-image-1.jpg',
@@ -75,7 +76,7 @@ class _MyAppState extends State<MyApp> {
           floatingActionButton: FloatingActionButton(
             onPressed: () {
               setState(() {
-              opacidade = !opacidade;
+                opacidade = !opacidade;
               });
             },
             child: Icon(Icons.remove_red_eye),
@@ -142,45 +143,7 @@ class _TaskState extends State<Task> {
                                   overflow: TextOverflow.ellipsis),
                             ),
                           ),
-                          Row(
-                            children: [
-                              Icon(
-                                Icons.star,
-                                size: 15,
-                                color: widget.dificuldade > 0
-                                    ? Colors.blue
-                                    : Colors.blue[999],
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 15,
-                                color: widget.dificuldade > 1
-                                    ? Colors.blue
-                                    : Colors.blue[100],
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 15,
-                                color: widget.dificuldade > 2
-                                    ? Colors.blue
-                                    : Colors.blue[100],
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 15,
-                                color: widget.dificuldade > 3
-                                    ? Colors.blue
-                                    : Colors.blue[100],
-                              ),
-                              Icon(
-                                Icons.star,
-                                size: 15,
-                                color: widget.dificuldade > 4
-                                    ? Colors.blue
-                                    : Colors.blue[100],
-                              ),
-                            ],
-                          )
+                          Difficulty(difficultyLevel: widget.dificuldade)
                         ],
                       ),
                       Container(
@@ -232,3 +195,4 @@ class _TaskState extends State<Task> {
         ])));
   }
 }
+
