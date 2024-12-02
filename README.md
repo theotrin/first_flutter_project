@@ -2,6 +2,12 @@
 
 Este é **meu primeiro projeto em Flutter** 🎉, uma aplicação que transforma uma simples lista de tarefas em uma experiência gamificada. Aqui, você não apenas organiza o seu dia, mas também acompanha o progresso em diferentes atividades, como aprender uma habilidade ou cultivar hábitos, utilizando níveis e maestria. 💪✨
 
+## 📷 Visual do App
+![foto1](https://github.com/user-attachments/assets/02042d25-a6a6-4c46-a21a-0f2135cd2dec)
+![foto2](https://github.com/user-attachments/assets/b761c337-4c32-4796-9b35-5794a5d725b2)
+### Aplicativo antes e depois do botão de esconder tarefas ser pressionado.
+---
+
 ## 🚀 Funcionalidades
 
 1. **Tarefas Gamificadas**:  
@@ -36,17 +42,5 @@ O objetivo deste projeto foi aprender os fundamentos do Flutter enquanto criava 
 
 - **Framework**: [Flutter](https://flutter.dev/)  
 - **Linguagem**: Dart    
-
----
-
-## 📷 Visual do App
-
-<img src="[foto1](https://github.com/user-attachments/assets/99861bbf-4fdb-4f1f-9e9c-90bc53252334)" alt="Imagem do aplicativo" width="300">  
-
----
-
-## ✨ Sobre Mim
-
-Flutter foi a primeira coisa que vi sobre mobile e eu pessoalmente gostei bastante!, no inicio achei um pouco complicado mas depois assimilei os widgets com CSS e web e tudo fluiu!, gostei bastante do framework. Este projeto foi minha porta de entrada no Flutter, mas o que me motiva é continuar explorando novas tecnologias e criar experiências incríveis para os usuários.
 
 ---
